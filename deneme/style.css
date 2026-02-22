@@ -1,0 +1,44 @@
+
+/* Genel Stil Düzenlemeleri */
+body {
+    background-color: #000;
+}
+
+/* Scrollbar Tasarımı */
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c5a059;
+}
+
+/* Form Elemanları */
+input:focus, textarea:focus {
+    border-bottom-color: #c5a059 !important;
+}
+
+/* Proje Kartları */
+.group img {
+    filter: grayscale(100%);
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.group:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    animation: fadeIn 1s ease-out forwards;
+}
